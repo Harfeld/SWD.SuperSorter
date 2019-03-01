@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperSorter
 {
-    class SelectionSort
+    class SelectionSort : SuperSorter
     {
         public static void exchange(int[] data, int m, int n)
         {
@@ -26,7 +26,7 @@ namespace SuperSorter
             return minPos;
         }
 
-        public static void Sort(int[] data)
+        protected override void Sort(int[] data)
         {
             int i;
             int N = data.Length;
