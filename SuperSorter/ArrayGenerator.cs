@@ -9,22 +9,24 @@ using System.Threading.Tasks;
 namespace SuperSorter
 {
     class ArrayGenerator
-    {
-       private Random rand;
+    {   
+        private Random rand;
 
-       public int[] Generate(int size, int max, int seed)
-       {
+        public int[] Generate(int size, int max, int seed)
+        {
             int[] array = new int[size];
             Fill(array, max, seed);
             return array;
-       }
-       private Fill(int[] ar, int max, int seed)
-       {
-           rand = new Random(seed);
-           foreach (var number in ar)
-           {
-               ar[number] = rand.Next(max);
-           }
         }
-    }
+
+        private void Fill(int[] ar, int max, int seed)
+        {
+            rand = new Random(seed);
+            for (int i = 0; i < ar.Length; i++)
+            {
+                ar[i] = rand.Next(max);
+            }
+        }
+     }
 }
+        

@@ -10,6 +10,13 @@ namespace SuperSorter
     {
         static void Main(string[] args)
         {
+            ArrayGenerator gen = new ArrayGenerator();
+            int[] test = gen.Generate(5, 10, 1);
+
+            foreach (var num in test)
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }

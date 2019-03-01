@@ -8,5 +8,6 @@ namespace SuperSorter
 {
     class SuperSorter
     {
+        public void Sort(int[] _ar);
     }
 }
